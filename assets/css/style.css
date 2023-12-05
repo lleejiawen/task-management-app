@@ -1,0 +1,174 @@
+/* style */
+.main-content a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #000;
+}
+
+.page-title {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+table {
+    width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+option {
+    text-transform: capitalize;
+}
+
+.nav-col {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.content-col {
+    padding-left: 10px;
+    margin-bottom: 60px;
+}
+
+.fa {
+    color: #007BF2;
+}
+
+.welcome-container {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .welcome-container {
+    padding: 10px;
+  }
+}
+
+/* alert box */
+.alert-group, .no-result {
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.success-message {
+    background-color: #ddffdd;
+    border: 1px solid #4BB543;
+}
+
+.error-message {
+    background-color: #ffdddd;
+    border: 1px solid #f44336;
+}
+
+.alert-group p {
+    margin: 0;
+}
+
+/* action btn */
+.action-group{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.action-group .btn, .action-group .btn:hover {
+    color: #fff;    
+}
+
+.action-group .back-btn, .form-button .cancel-btn{
+    background-color: #555555;
+}
+
+.action-group .add-btn, .form-button .submit-btn, .action-group .change-ps-btn {
+    background-color: #28a745;
+}
+
+.action-group .add-btn:hover, .form-button .submit-btn:hover, .action-group .change-ps-btn:hover {
+    background-color: #218838;
+}
+
+.action-group .edit-btn {
+    background-color: #007bff;
+}
+
+.action-group .edit-btn:hover {
+    background-color: #0056b3;
+}
+
+.action-group .delete-btn {
+    color: #fff;
+    background-color: #f44336;
+}
+
+.filter-search input {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.filter select {
+    padding: 6px 12px;
+    width: auto;
+}
+
+.search, .filter {
+    margin-bottom: 10px;
+}
+
+.filter-search {
+    margin-top: 20px;
+}
+
+/* content table */
+.content-table th, .content-table td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: left;
+}
+    
+.content-table th {
+    background-color: #f2f2f2;
+    width: 20%;
+}
+
+.content-container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.content-container label {
+    padding: 12px 12px 12px 0;
+}
+
+.content-container input[type=text], input[type=date], input[type=tel], input[type=email],select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.content-container button {
+    color: #fff;
+    padding: 12px 20px;
+    margin: 5px;
+    float: right;
+}
+
+.content-container button:hover {
+    color: #fff;
+}
+
+.content-container .form-button {
+    display: flex;
+    justify-content: right;
+}
+
+.content-container .readonly {
+    background-color: #f3f3f3;
+}
