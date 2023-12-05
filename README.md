@@ -60,3 +60,10 @@
 2. Start the XAMPP control panel and ensure that the Apache server is running.
 3. Create a new database 'task-management' in phpMyAdmin and import the sql file.
 
+**administrator account**
+- username: master1
+- password: m@ster1
+
+**user account**
+- username: support1
+- password: supp@rt1
