@@ -53,4 +53,10 @@
 - **Customer Page Enhancements**:
   - **Customer Log for Task Tracking**: Enable tracking of tasks related to specific customers.
   - **Mobile Responsive Design**: Ensure a seamless user experience on mobile devices.
+  - 
+## Getting Started
+
+1. Clone the Repository
+2. Start the XAMPP control panel and ensure that the Apache server is running.
+3. Create a new database 'task-management' in phpMyAdmin and import the sql file.
 
