@@ -64,6 +64,9 @@ A simple task management application for the customer service operations departm
 - **Analytics Dashboard**: Incorporate a comprehensive analytics dashboard to track and visualize task and customer data.
 - **UX/UI Enhancement**: Continuously refine the user interface and experience to provide a more intuitive and visually appealing application.
 - **Customer Page Enhancements**: Enable tracking of tasks related to specific customers.
+- **To Be Fixed**
+  - Table pagination
+  - Collapsed navigation bar for responsive
     
 ## Getting Started
 
