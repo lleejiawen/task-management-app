@@ -1,8 +1,10 @@
 # Task Management Application
-
+![image](https://github.com/lleejiawen/task-management-app/assets/51112259/3ce179ec-a70f-43ee-b6ba-cfd7c6f0abf7)
 ## 1. Dashboard
 
 - The dashboard serves as a navigation to other sections of the application.
+
+![image](https://github.com/lleejiawen/task-management-app/assets/51112259/d9c0339f-ff68-4940-aa64-6b17d7f009f2)
 
 ## 2. Profile
 
@@ -10,6 +12,8 @@
 - Features:
   - Edit Profile
   - Change Password
+
+![image](https://github.com/lleejiawen/task-management-app/assets/51112259/52cc9143-6045-46a7-a0b2-e9b299ad82e9)
 
 ## 3. Tasks
 
@@ -19,6 +23,8 @@
   - Search and filter tasks.
   - Add, edit, and delete tasks.
 
+![image](https://github.com/lleejiawen/task-management-app/assets/51112259/457d0f41-f855-43f9-97b5-932c4fa4520a)
+
 ## 4. Customers
 
 - View and manage customers.
@@ -26,7 +32,9 @@
   - Display all customers details.
   - Search customers.
   - Add and edit customer details.
- 
+
+ ![image](https://github.com/lleejiawen/task-management-app/assets/51112259/61cc1e5d-7da6-4cb3-9df6-5fdc8cf8e31a)
+
 ## 5. Users
 
 - Only accessible by administrator user.
@@ -36,7 +44,9 @@
   - Search users.
   - Add and edit users details.
   - Change Password.
- 
+
+![image](https://github.com/lleejiawen/task-management-app/assets/51112259/c02e3f96-c746-4d28-bbba-7fc7e6cd9c1d)
+
 ## 6. Departments
 
 - Only accessible by administrator user.
@@ -45,15 +55,15 @@
   - Display all department details.
   - Add and edit department details.
 
+![image](https://github.com/lleejiawen/task-management-app/assets/51112259/bb203574-10df-4979-bf74-27f910b4a229)
+
 ## Future Improvements
 
 - **Mobile Responsiveness**: Ensure the application is fully responsive for seamless usage on various devices.
 - **Analytics Dashboard**: Incorporate a comprehensive analytics dashboard to track and visualize task and customer data.
 - **UX/UI Enhancement**: Continuously refine the user interface and experience to provide a more intuitive and visually appealing application.
-- **Customer Page Enhancements**:
-  - **Customer Log for Task Tracking**: Enable tracking of tasks related to specific customers.
-  - **Mobile Responsive Design**: Ensure a seamless user experience on mobile devices.
-  - 
+- **Customer Page Enhancements**: Enable tracking of tasks related to specific customers.
+    
 ## Getting Started
 
 1. Clone the Repository
