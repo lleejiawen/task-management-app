@@ -41,13 +41,13 @@ $get_department = mysqli_query($conn, "SELECT DISTINCT * FROM `user_department`"
 		 		    if ($result && mysqli_num_rows($result) > 0) {
 		        	$user = mysqli_fetch_assoc($result);
 		    	?>
-			   <form action="../users-api/update.php" method="post"> 
-			    	<div class="row form-field">
+			   <form action="../users-api/update.php" method="post">
+			   		<div class="row form-field">
 			        	<div class="col-sm-2">
-			        		<label for="name"><b>Username *</b></label>
+			        		<label for="user_id"><b>User ID *</b></label>
 			        	</div>
 			            <div class="col-sm-10">
-			            	<input type="text" name="username" id="username" placeholder="Enter username" value="<?php echo $user['username']; ?>" required>
+			            	<input type="text" class="readonly" name="user_id" id="user_id" value="<?php echo $user['id']; ?>" required readonly>
 			            </div>
 					</div>
 
@@ -57,6 +57,15 @@ $get_department = mysqli_query($conn, "SELECT DISTINCT * FROM `user_department`"
 			        	</div>
 			            <div class="col-sm-10">
 			            	<input type="text" name="full_name" id="full_name" placeholder="Enter full name" value="<?php echo $user['full_name']; ?>" required>
+			            </div>
+					</div>
+
+			    	<div class="row form-field">
+			        	<div class="col-sm-2">
+			        		<label for="name"><b>Username *</b></label>
+			        	</div>
+			            <div class="col-sm-10">
+			            	<input type="text" name="username" id="username" placeholder="Enter username" value="<?php echo $user['username']; ?>" required>
 			            </div>
 					</div>
 
@@ -71,7 +80,7 @@ $get_department = mysqli_query($conn, "SELECT DISTINCT * FROM `user_department`"
 
 					<div class="row form-field">
 			        	<div class="col-sm-2">
-			            	<label for="user_department"><b>User Department *</b></label>
+			            	<label for="user_department"><b>Department *</b></label>
 			            </div>
 			            <div class="col-sm-10">
 				            <select name="user_department">		            	
@@ -99,7 +108,21 @@ $get_department = mysqli_query($conn, "SELECT DISTINCT * FROM `user_department`"
 				        </div>
 					</div>
 
-					<input type="hidden" name="user_id" value="<?php echo $user['id']; ?>">
+					<div class="row form-field">
+		              <div class="col-sm-2">
+		                <label for="created_at"><b>Created At</b></label>
+		              </div>
+		              <div class="col-sm-10">
+		              <?php 
+		                $created_at_timestamp = ($user["created_at"] != '-') ? (int)$user["created_at"] : null;
+		                      
+		                if ($created_at_timestamp !== null && $created_at_timestamp > 0) {
+		                  $formatted = (new DateTime())->setTimestamp($created_at_timestamp)->format('Y-m-d');
+		                }
+		              ?>
+		                <input type="date" class="readonly" id="created_at" name="created_at" value="<?php echo $formatted; ?>">
+		              </div>
+		            </div>
 
 					<div class="form-button">
 						<button type="submit" class="btn submit-btn" name="submit">Save</button>

@@ -52,15 +52,23 @@ $user_id = $_SESSION['user_id'];
       </div>
 
       <?php 
-      $result = mysqli_query($conn, "SELECT * FROM `users` WHERE id=$user_id");
-
+      $result = mysqli_query($conn, 
+      "SELECT users.*, user_type.user_type as user_type_name, user_department.name as user_department_name
+      FROM `users`
+      LEFT JOIN `user_type` ON user_type.id = users.user_type
+      LEFT JOIN `user_department` ON user_department.id = users.user_department 
+      WHERE users.id=$user_id
+      ");
+      
       if ($result && mysqli_num_rows($result) > 0) {
           $user = mysqli_fetch_assoc($result);
 
           echo "<table class='content-table'>";          
-          echo "<tr><th>Username</th><td>{$user['username']}</td></tr>";
           echo "<tr><th>Full Name</th><td>{$user['full_name']}</td></tr>";
+          echo "<tr><th>Username</th><td>{$user['username']}</td></tr>";
           echo "<tr><th>Email</th><td>{$user['email']}</td></tr>";
+          echo "<tr><th>Department</th><td>{$user['user_department_name']}</td></tr>";
+          echo "<tr><th>User Type</th><td>{$user['user_type_name']}</td></tr>";
           echo "<tr><th>Created At</th><td>";
           if (!empty($user['created_at']) && $user['created_at'] !== 'null') {
             $created_at = (int)$user['created_at'];

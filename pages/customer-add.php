@@ -55,7 +55,7 @@ include '../includes/db.php';
 			 	      <label for="email"><b>Phone *</b></label>
 			      </div>
 			      <div class="col-sm-10">
-			        <input type="tel" name="phone" id="phone" placeholder="Enter customer phone" pattern="^\[689]\d{7}$" required>
+			        <input type="tel" name="phone" id="phone" placeholder="Enter customer phone" pattern="[689]\d{7,}$" required>
 			    	</div>
 					</div>
 

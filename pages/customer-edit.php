@@ -66,7 +66,7 @@ if ($customer_id) {
 		 	        <label for="email"><b>Phone *</b></label>
 		        </div>
 		        <div class="col-sm-10">
-		          <input type="tel" name="phone" id="phone" placeholder="Enter customer phone" pattern="^\[689]\d{7}$" value="<?php echo $customer['phone']; ?>" required>
+		          <input type="tel" name="phone" id="phone" placeholder="Enter customer phone" pattern="[689]\d{7,}$" value="<?php echo $customer['phone']; ?>" required>
 		    	  </div>
 					</div>
 

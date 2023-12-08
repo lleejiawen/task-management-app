@@ -1,6 +1,9 @@
 <?php 
 include '../includes/session.php'; 
 include '../includes/db.php';
+
+$get_type = mysqli_query($conn, "SELECT DISTINCT * FROM `user_type`");
+$get_department = mysqli_query($conn, "SELECT DISTINCT * FROM `user_department`");
 ?>
 
 <!DOCTYPE html>
@@ -38,8 +41,17 @@ include '../includes/db.php';
             if ($result && mysqli_num_rows($result) > 0) {
             $user = mysqli_fetch_assoc($result);
           ?>
-         <form action="../profile-api/update.php" method="post">
+         <form action="../users-api/update.php" method="post">
              
+            <div class="row form-field">
+              <div class="col-sm-2">
+                <label for="task_description"><b>Full Name</b></label>
+              </div>
+              <div class="col-sm-10">
+               <input type="text" name="full_name" id="full_name" placeholder="Enter full name" value="<?php echo $user['full_name']; ?>" required>
+              </div>
+            </div>
+
             <div class="row form-field">
               <div class="col-sm-2">
                 <label for="task_name"><b>Username</b></label>
@@ -51,20 +63,41 @@ include '../includes/db.php';
 
             <div class="row form-field">
               <div class="col-sm-2">
-                <label for="task_description"><b>Full Name</b></label>
+                <label for="task_description"><b>Email</b></label>
               </div>
               <div class="col-sm-10">
-               <input type="text" name="full_name" class="readonly" id="full_name" placeholder="Enter full name" value="<?php echo $user['full_name']; ?>" required readonly>
+                <input type="text" name="email" id="email" placeholder="Enter email" value="<?php echo $user['email']; ?>" required>
               </div>
             </div>
 
             <div class="row form-field">
-              <div class="col-sm-2">
-                <label for="task_description"><b>Email</b></label>
-              </div>
-              <div class="col-sm-10">
-                <input type="text" name="email" class="readonly" id="email" placeholder="Enter email" value="<?php echo $user['email']; ?>" required readonly>
-              </div>
+                <div class="col-sm-2">
+                    <label for="user_department"><b>Department *</b></label>
+                  </div>
+                  <div class="col-sm-10">
+                    <select name="user_department" <?php if ($user['user_type'] != 1){ echo 'class="readonly" disabled'; }?>>                 
+                      <?php  while ($department = mysqli_fetch_array($get_department,MYSQLI_ASSOC)){ ?>
+                        <option value="<?php echo $department["id"]; ?>" <?php echo ($department["id"] == $user["user_department"]) ? 'selected' : ''; ?>>
+                            <?php echo $department["name"]; ?>
+                        </option>
+                      <?php } ?>
+                  </select>
+                </div>
+            </div>
+
+            <div class="row form-field">
+                  <div class="col-sm-2">
+                      <label for="user_type"><b>User Type *</b></label>
+                    </div>
+                    <div class="col-sm-10">
+                      <select name="user_type" <?php if ($user['user_type'] != 1){ echo 'class="readonly" disabled'; }?>>           
+                        <?php  while ($type = mysqli_fetch_array($get_type,MYSQLI_ASSOC)){ ?>
+                          <option value="<?php echo $type["id"]; ?>" <?php echo ($type["id"] == $user["user_type"]) ? 'selected' : ''; ?>>
+                              <?php echo $type["user_type"]; ?>
+                          </option>
+                        <?php } ?>
+                    </select>
+                  </div>
             </div>
 
             <div class="row form-field">
