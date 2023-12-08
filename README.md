@@ -1,4 +1,5 @@
 # Task Management Application
+A simple task management application for the customer service operations department. 
 ![image](https://github.com/lleejiawen/task-management-app/assets/51112259/3ce179ec-a70f-43ee-b6ba-cfd7c6f0abf7)
 ## 1. Dashboard
 
